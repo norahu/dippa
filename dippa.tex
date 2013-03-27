@@ -766,28 +766,6 @@ Organizations need to fundamentally rethink the training and support provided to
 Fundamentally defining the sales begins with understanding the buying process. In this chapter I will introduce the theories behind the buying. 
 
 
-When you use \texttt{pdflatex} to render your thesis, you can include PDF images
-directly, as shown by Figure~\ref{fig:indica_model} below.
-
-\begin{figure}[ht]
-  \begin{center}
-    \includegraphics[width=\textwidth]{example_indica_model.pdf}
-    \caption{The INDICA two-layered value chain model.}
-    \label{fig:indica_model}
-  \end{center}
-\end{figure}
-
-You can also include JPEG or PNG files, as shown by Figure~\ref{fig:eeyore}.
-
-
-
-You can create PDF files out of practically anything.
-In Windows, you can download PrimoPDF or CutePDF (or some such) and install a
-printing driver so that you can print directly to PDF files from any
-application. There are also tools that allow you to upload documents in common
-file formats and convert them to the PDF format.
-If you have PS or EPS files, you can use the tools \texttt{ps2pdf} or
-\texttt{epspdf} to convert your PS and EPS files to PDF\@.
 
 % Comment: If your sentence ends in a capital letter, like here, you should
 % write \@ before the period; otherwise LaTeX will assume that this is not
@@ -800,56 +778,10 @@ If you have PS or EPS files, you can use the tools \texttt{ps2pdf} or
 % the longer sentence separator), use \  (backslash and space) after the
 % period. Like so: a.\ first item, b.\ second item.
 
-Furthermore, most newer editor programs allow you to save directly to the PDF
-format. For vector editing, you could try Inkscape, which is a new open source
-WYSIWYG vector editor that allows you to save directly to PDF\@.
-For graphs, either export/print your graphs from OpenOffice Calc/Microsoft
-Excel to PDF format, and then add them; or use \texttt{gnuplot}, which can
-create PDF files directly (at least the new versions can).
-The terminal type is \emph{pdf}, so the first line of your plot file should be
-something like \texttt{set term pdf \ldots}.
 
-To get the most professional-looking graphics, you can encode them using the
-TikZ package (TikZ is a frontend for the PGF graphics formatting system).
-You can create practically any kind of technical images with TikZ, but it has a
-rather steep learning curve. Locate the manual (\texttt{pgfmanual.pdf}) from
-your \LaTeX\ distribution and check it out. An example of TikZ-generated
-graphics is shown in Figure~\ref{fig:page-merge}.
-
-\begin{figure}[ht]
-  \begin{center}
-    \input{example_page-merge.tex}
-    \caption{Example of a multiversion database page merge. This figure has
-    been taken from the PhD thesis of Haapasalo~\cite{HaapasaloThesis}.}
-    \label{fig:page-merge}
-  \end{center}
-\end{figure}
-
-Another example of graphics created with TikZ is shown in
-Figure~\ref{fig:tikz-examples}.
-These show how graphs can be drawn and labeled.
-You can consult the example images and the PGF manual for more examples of what
-kinds figures you can draw with TikZ.
 
 % These definitions are only used in the example images; you will not
 % need them for your thesis...
-\newlength{\graphdotsize}
-\setlength{\graphdotsize}{1.7pt}
-\newlength{\graphgridsize}
-\setlength{\graphgridsize}{1.2em}
-\begin{figure}[ht]
-\begin{center}
-\subfigure[Examples of obstruction graphs for the Ferry Problem]{
-  \input{example_obstruction-grouped.tex}
-}
-\subfigure[Examples of star graphs]{
-  \input{example_general-star-graphs.tex}
-}
-\caption{Examples of graphs draw with TikZ. These figures have been taken from a
-course report for the graph theory course~\cite{FerryProblem}.}
-\label{fig:tikz-examples}
-\end{center}
-\end{figure}
 
 \section{Service concept}
 
