@@ -131,7 +131,7 @@
 
 % Natbib allows you to select the format of the bibliography references.
 % The first example uses numbered citations:
-%\usepackage[square,sort&compress,numbers]{natbib}
+\usepackage[square,sort&compress,numbers]{natbib}
 % The second example uses author-year citations.
 % If you use author-year citations, change the bibliography style (below);
 % acm style does not work with author-year citations.
@@ -139,7 +139,7 @@
 % to the author directly (\citet{blaablaa} said blaa blaa), and
 % \citep when you wish to refer similarly than with numbered citations
 % (It has been said that blaa blaa~\citep{blaablaa}).
- \usepackage[round]{natbib}
+% \usepackage[square]{natbib}
 
 % The alltt package provides an all-teletype environment that acts
 % like verbatim but you can use LaTeX commands in it. Uncomment if
@@ -257,14 +257,15 @@
 % You can just fix the texts there. Just remember to check all the language
 % variants you use (they are all there in the same place).
 % ------------------------------------------------------------------
-\newcommand{\TITLE}{Presales}
-\newcommand{\FTITLE}{Presales-funktio}
-
-\newcommand{\SUBTITLE}{How presales should be organized at Sievo? }
-\newcommand{\FSUBTITLE}{Tapaus Sievo}
-\newcommand{\DATE}{March 22, 2013}
-\newcommand{\FDATE}{22. maaliskuuta 2013}
-\newcommand{\ATDEGREEPROG}{Degree Programme in Information Networks}
+\newcommand{\TITLE}{Software Processes for Dummies:}
+\newcommand{\FTITLE}{Ohjelmistoprosessit mänteille:}
+\newcommand{\STITLE}{Den stora stygga vargen:}
+\newcommand{\SUBTITLE}{Re-inventing the Wheel}
+\newcommand{\FSUBTITLE}{Uusi organisaatio, uudet pyörät}
+\newcommand{\SSUBTITLE}{Lilla Vargens universum}
+\newcommand{\DATE}{June 18, 2011}
+\newcommand{\FDATE}{18. kesäkuuta 2011}
+\newcommand{\SDATE}{Den 18 Juni 2011}
 
 % Supervisors and instructors
 % ------------------------------------------------------------------
@@ -278,14 +279,17 @@
 %\newcommand{\FSUPERVISOR}{Professori Antti Ylä-Jääski}
 %\newcommand{\SSUPERVISOR}{Professor Antti Ylä-Jääski}
 % Example of twosupervisors:
-\newcommand{\SUPERVISOR}{Professor Eila Järvenpää}
-\newcommand{\FSUPERVISOR}{Professori Eila Järvenpää}
-
+\newcommand{\SUPERVISOR}{Professor Antti Ylä-Jääski\\
+  Professor Pekka Perustieteilijä}
+\newcommand{\FSUPERVISOR}{Professori Antti Ylä-Jääski\\
+  Professori Pekka Perustieteilijä}
+\newcommand{\SSUPERVISOR}{Professor Antti Ylä-Jääski\\
+  Professor Pekka Perustieteilijä}
 
 % If you have only one instructor, just write one name here
-\newcommand{\INSTRUCTOR}{Sammeli Sammalkorpi M.Sc. (Tech.)}
-\newcommand{\FINSTRUCTOR}{Diplomi-insinööri Sammeli Sammalkorpi}
-
+\newcommand{\INSTRUCTOR}{Olli Ohjaaja M.Sc. (Tech.)}
+\newcommand{\FINSTRUCTOR}{Diplomi-insinööri Olli Ohjaaja}
+\newcommand{\SINSTRUCTOR}{Diplomingenjör Olli Ohjaaja}
 % If you have two instructors, separate them with \\ to create linefeeds
 % \newcommand{\INSTRUCTOR}{Olli Ohjaaja M.Sc. (Tech.)\\
 %  Elli Opas M.Sc. (Tech)}
@@ -298,7 +302,8 @@
 % of the supervisors in the cover page. If the following command is defined,
 % then the supervisor names shown here are printed in the cover page. Otherwise,
 % the supervisor names defined above are used.
-\newcommand{\COVERSUPERVISOR}{Professor Eila Järvenpää, Aalto University}
+\newcommand{\COVERSUPERVISOR}{Professor Antti Ylä-Jääski, Aalto University\\
+  Professor Pekka Perustieteilijä, University of Helsinki}
 
 % The same option is for the instructors, if you have multiple instructors.
 % \newcommand{\COVERINSTRUCTOR}{Olli Ohjaaja M.Sc. (Tech.), Aalto University\\
@@ -307,20 +312,23 @@
 
 % Other stuff
 % ------------------------------------------------------------------
-\newcommand{\PROFESSORSHIP}{Knowldge Intensive Business}
-\newcommand{\FPROFESSORSHIP}{Tietointensiivinen liiketoiminta}
-
+\newcommand{\PROFESSORSHIP}{Data Communication Software}
+\newcommand{\FPROFESSORSHIP}{Tietoliikenneohjelmistot}
+\newcommand{\SPROFESSORSHIP}{Datakommunikationsprogram}
 % Professorship code is the same in all languages
-\newcommand{\PROFCODE}{TU-53}
-\newcommand{\KEYWORDS}{presales, sales process, ...}
-\newcommand{\FKEYWORDS}{myyntiprosessi}
-
+\newcommand{\PROFCODE}{T-110}
+\newcommand{\KEYWORDS}{ocean, sea, marine, ocean mammal, marine mammal, whales,
+cetaceans, dolphins, porpoises}
+\newcommand{\FKEYWORDS}{AEL, aineistot, aitta, akustiikka, Alankomaat,
+aluerakentaminen, Anttolanhovi, Arcada, ArchiCad, arkki}
+\newcommand{\SKEYWORDS}{omsättning, kassaflöde, värdepappersmarknadslagen,
+yrkesutövare, intresseföretag, verifieringskedja}
 \newcommand{\LANGUAGE}{English}
 \newcommand{\FLANGUAGE}{Englanti}
-
+\newcommand{\SLANGUAGE}{Engelska}
 
 % Author is the same for all languages
-\newcommand{\AUTHOR}{Nora Huovila}
+\newcommand{\AUTHOR}{Stella Student}
 
 
 % Currently the English versions are used for the PDF file metadata
@@ -358,7 +366,7 @@
 % Bibliography style
 % acm style gives you a basic reference style. It works only with numbered
 % references.
-\bibliographystyle{plainnat}
+\bibliographystyle{acm}
 % Plainnat is a plain style that works with both numbered and name citations.
 % \bibliographystyle{plainnat}
 
@@ -403,13 +411,75 @@
 % Abstract in English
 % ------------------------------------------------------------------
 \thesisabstract{english}{
-Abstract in English
+A dissertation or thesis is a document submitted in support of candidature
+for a degree or professional qualification presenting the author's research and
+findings. In some countries/universities, the word thesis or a cognate is used
+as part of a bachelor's or master's course, while dissertation is normally
+applied to a doctorate, whilst, in others, the reverse is true.
+
+\fixme{Abstract text goes here (and this is an example how to use fixme).}
+Fixme is a command that helps you identify parts of your thesis that still
+require some work. When compiled in the custom \texttt{mydraft} mode, text
+parts tagged with fixmes are shown in bold and with fixme tags around them. When
+compiled in normal mode, the fixme-tagged text is shown normally (without
+special formatting). The draft mode also causes the ``Draft'' text to appear on
+the front page, alongside with the document compilation date. The custom
+\texttt{mydraft} mode is selected by the \texttt{mydraft} option given for the
+package \texttt{aalto-thesis}, near the top of the \texttt{thesis-example.tex}
+file.
+
+The thesis example file (\texttt{thesis-example.tex}), all the chapter content
+files (\texttt{1introduction.tex} and so on), and the Aalto style file
+(\texttt{aalto-thesis.sty}) are commented with explanations on how the Aalto
+thesis works. The files also contain some examples on how to customize various
+details of the thesis layout, and of course the example text works as an
+example in itself. Please read the comments and the example text; that should
+get you well on your way!}
 
 % Abstract in Finnish
 % ------------------------------------------------------------------
 \thesisabstract{finnish}{
-Suomenkielinen abstrakti
+Kivi on materiaali, joka muodostuu mineraaleista ja luokitellaan
+mineraalisisältönsä mukaan. Kivet luokitellaan yleensä ne muodostaneiden
+prosessien mukaan magmakiviin, sedimenttikiviin ja metamorfisiin kiviin.
+Magmakivet ovat muodostuneet kiteytyneestä magmasta, sedimenttikivet vanhempien
+kivilajien rapautuessa ja muodostaessa iskostuneita yhdisteitä, metamorfiset
+kivet taas kun magma- ja sedimenttikivet joutuvat syvällä maan kuoressa
+lämpötilan ja kovan paineen alaiseksi.
 
+Kivi on epäorgaaninen eli elottoman luonnon aine, mikä tarkoittaa ettei se
+sisällä hiiltä tai muita elollisen orgaanisen luonnon aineita. Niinpä kivestä
+tehdyt esineet säilyvät maaperässä tuhansien vuosien ajan mätänemättä. Kun
+orgaaninen materiaali jättää jälkensä kiveen, tulos tunnetaan nimellä fossiili.
+
+Suomen peruskallio on suurimmaksi osaksi graniittia, gneissiä ja
+Kaakkois-Suomessa rapakiveä.
+
+Kiveä käytetään teollisuudessa moniin eri tarkoituksiin, kuten keittiötasoihin.
+Kivi on materiaalina kalliimpaa mutta kestävämpää kuin esimerkiksi puu.}
+
+% Abstract in Swedish
+% ------------------------------------------------------------------
+\thesisabstract{swedish}{
+Lilla Vargens universum är det tredje fiktiva universumet inom huvudfäran av de
+tecknade disneyserierna - de övriga två är Kalle Ankas och Musse Piggs
+universum. Figurerna runt Lilla Vargen kommer huvudsakligen frän tre källor ---
+dels persongalleriet i kortfilmen Tre smä grisar frän 1933 och dess uppföljare,
+dels längfilmen Sängen om Södern frän 1946, och dels frän episoden ``Bongo'' i
+längfilmen Pank och fägelfri frän 1947. Framför allt de två första har
+sedermera även kommit att leva vidare, utvidgas och införlivas i varandra genom
+tecknade serier, främst sädana producerade av Western Publishing för
+amerikanska Disneytidningar under ären 1945--1984.
+
+Världen runt Lilla Vargen är, i jämförelse med den runt Kalle Anka eller Musse
+Pigg, inte helt enhetlig, vilket bland annat märks i Bror Björns skiftande
+personlighet. Den har även varit betydligt mer öppen för influenser frän andra
+Disneyvärldar, inte minst de tecknade längfilmerna. Ytterligare en skillnad är
+att varelserna i vargserierna förefaller stä närmare sina förebilder inom den
+verkliga djurvärlden. Att vargen Zeke vill äta upp grisen Bror Duktig är till
+exempel ett ständigt äterkommande tema, men om katten Svarte Petter skulle fä
+för sig att äta upp musen Musse Pigg skulle detta antagligen höja ett och annat
+ögonbryn bland läsarna.}
 
 
 % Acknowledgements
@@ -425,10 +495,13 @@ Suomenkielinen abstrakti
 % show up in the TOC
 \chapter*{Acknowledgements}
 
-tähän suuret kiitokset kaikille !
+I wish to thank all students who use \LaTeX\ for formatting their theses,
+because theses formatted with \LaTeX\ are just so nice.
+
+Thank you, and keep up the good work!
 \vskip 10mm
 
-\noindent Helsinki, \DATE
+\noindent Espoo, \DATE
 \vskip 5mm
 \noindent\AUTHOR
 
@@ -437,26 +510,26 @@ tähän suuret kiitokset kaikille !
 % Use \cleardoublepage so that IF two-sided printing is used
 % (which is not often for masters theses), then the pages will still
 % start correctly on the right-hand side.
-%\cleardoublepage
+\cleardoublepage
 % Example acronyms are placed in a separate file, acronyms.tex
 % \input{acronyms}
 
-%\addcontentsline{toc}{chapter}{Abbreviations and Acronyms}
-%\chapter*{Abbreviations and Acronyms}
+\addcontentsline{toc}{chapter}{Abbreviations and Acronyms}
+\chapter*{Abbreviations and Acronyms}
 
 % The longtable environment should break the table properly to multiple pages,
 % if needed
 
-%\noindent
-%\begin{longtable}{@{}p{0.25\textwidth}p{0.7\textwidth}@{}}
-%2k/4k/8k mode & COFDM operation modes \\
-%3GPP & 3rd Generation Partnership Project \\
-%ESP & Encapsulating Security Payload; An IPsec security protocol \\
-%FLUTE  & The File Delivery over Unidirectional Transport protocol \\
-%e.g.& for example (do not list here this kind of common acronymbs or abbreviations, but only those that are %essential for understanding the content of your thesis. \\
-%note & Note also, that this list is not compulsory, and should be omitted if you have only few abbreviations
+\noindent
+\begin{longtable}{@{}p{0.25\textwidth}p{0.7\textwidth}@{}}
+2k/4k/8k mode & COFDM operation modes \\
+3GPP & 3rd Generation Partnership Project \\
+ESP & Encapsulating Security Payload; An IPsec security protocol \\
+FLUTE  & The File Delivery over Unidirectional Transport protocol \\
+e.g.& for example (do not list here this kind of common acronymbs or abbreviations, but only those that are essential for understanding the content of your thesis. \\
+note & Note also, that this list is not compulsory, and should be omitted if you have only few abbreviations
 
-%\end{longtable}
+\end{longtable}
 
 
 % Table of contents
@@ -505,302 +578,357 @@ tähän suuret kiitokset kaikille !
 \chapter{Introduction}
 \label{chapter:intro}
 
+This is my master's thesis, and I am very proud of it.  Of course,
+when I write my \emph{real} master's thesis, I will not use the
+singular pronoun \emph{I}, but rather try to avoid referring to myself
+and speak of the research \emph{we} have conducted---I rarely work
+alone, after all.  Yet, both \emph{I} and \emph{we} are correct, and
+it depends on the instructor and the supervisor (of course from you,
+too), which one they would prefer. Anyway, the tense should be active,
+and passive sentenses should be avoided (especially, writing sentences
+where the subject is presented with by preposition), so often you
+cannot avoid choosing between the pronouns. Life is strange, but there
+you have it.
+
+By the way, the preferred order of writing your master's thesis is
+about the same as the outline of the thesis: you first discover your
+problem and write about that, then you find out what methods you
+should use and write about that.  Then you do your implementation, and
+document that, and so on.  However, the abstract and introduction are
+often easiest to write last.  This is because these really cover the
+entire thesis, and there is no way you could know what to put in your
+abstract before you have actually done your implementation and
+evaluation. Rarely anyone write the thesis from the beginning to the
+end just one time, but the writing is more like process, where every
+piece of text is written at least twice. Be also prepared to delete
+your own text. In the first phase, you can hide it into comments that
+are started with \% but during the writing, the many comments should be
+visible for your helpers, the instructor and supervisor.
+
+The introduction in itself is rarely very long; two to five pages often
+suffice.
 
 
+\section{Problem statement}
 
+Undergraduate students studying technical subjects do not consider typography
+very interesting these days, and therefore the typographical quality of many
+theses is unacceptably low.
+We plan to rectify this situation somewhat by providing a decent-quality
+example thesis outline for students.
+We expect that the typographical quality of the master's theses will
+dramatically increase as the new thesis outline is taken into use.
 
+\section{Helpful hints}
 
-\section{Background}
+Read the information from the university master's thesis
+pages~\cite{ThesisInstructions} before starting the thesis.  You
+should also go through the thesis grading
+instructions~\cite{ThesisGrading} together with your instructor and/or
+supervisor in the beginning of your work.
 
-hieman taustaa tutkimukselle ja caselle
-
-\section{Research problem and questions}
-\label{section:constructive}
-
-What is presales? How is it defined in relation to the sales process and to the buying process?
-
-How presales should be organized at Sievo. 
-
-\section{Research framework and objectives}
+\section{Structure of the Thesis}
 \label{section:structure}
 
-The objective is to imporve existing practices in the case company. therefore I chose the constructive case study as a reserach method. It focuses on solving business problems in real-life situations of organisations. Kasanen 1993. Depending on the nature of the case study existing literature should be used as a basis of analysis. Yin, 2003. 
-
-Qualitative = purpose to understand human behaviour and reasons behind it by using interviews and observations. 
-
-\section{Scope of the study}
-\label{section:structure}
-
-\section{Terminology}
-\label{section:Terminology}
+You should use transition in your text, meaning that you should help
+the reader follow the thesis outline. Here, you tell what will be in
+each chapter of your thesis.
 
 
-\noindent
-\begin{longtable}{@{}p{0.25\textwidth}p{0.7\textwidth}@{}}
-B2B & Business to Business \\
-RFP & Request for Proposal - Either formal document or informal request sent by buyer to potential suppliers for the purpose of collecting proposals a certain business need or problem \\
-RFI & Request for Information - A formal request from a customer requesting information on supplier capabilities to be used in possily upcoming request for proposal \\
-Proposal  & A written offer from a seller to a prospective buyer. In the literature, also terms bid and offer are used to depict the same thing \\
-ERP & Enterprise resource planning \\
-Buying Center & all those members who become involved in the buying process for a particular product or service \\
-DMU & Decision Making Unit \\
-
-\end{longtable}
 
 % \input{2background.tex}
 
-\chapter{Case Sievo}
-\label{chapter:Case Sievo}
+\chapter{Background}
+\label{chapter:background}
 
-Tässä osiossa esittelen sievon yrityksenä myyntiorganisaation nykyistä toimintaan ja toivottuja tuloksia tutkimukselta.
+The problem must have some background, otherwise it is not
+interesting.  You can explain the background here. Probably you should
+change the title to something that describes more the content of this
+chapter. Background consists of information that help other masters of
+the same degree program to understand the rest of the thesis.
 
-\section{Sievo as a company}
+Transitions mentioned in Section~\ref{section:structure} are used also
+in the chapters and sections. For example, next in this chapter we
+tell how to use English language, how to find and refer to sources,
+and enlight different ways to include graphics in the thesis.
 
-Sievo is a software company found in 2003. The slogan "Advancing procurement performance" captures Sievo's mission. Sievo provides a sophisticated procurement performance management software that enables visibility on corporate spending, measurement of procurement contribution and tracking of contract compliance. Transaction data is gathered on a recurring basis from the customer ERP and measurements and reports are build on top of that. 
+\section{Language and Structure}
 
-The headquarters is located in Helsinki where the majority of the 40 employees is also based. Sievo also has sales offices in Paris, Stockholm, Frankfurt and Dubai. Currently Sievo serves over 30 clients globally. Users of the Sievo software are located all over the world. 
+Moreover, the transitions are also used in the paragraph and the
+sentence level meaning that all the text is linked together. For example,
+the word ``moreover'' here is one way, but of course you should use
+variation in the text. Examples of transitional devices (words) and
+their use can be found from writing guides, e.g. from the Online
+Writing Lab
+(OWL)\footnote{http://owl.english.purdue.edu/owl/resource/574/02/} of
+Purdue University or Strunk's Elements of
+Style\footnote{http://www.bartleby.com/141/}. Remember that footnotes
+are additional information, and they are seldom used.  If you refer to a source, you do no
+not use footnote. The right command for the references is \emph{cite}.
+
+The language used in the thesis should be technical (or
+scientifical). For example, the abreviations aren't used but all them
+are written open (i.e. ``are not''). Since the content itself is often
+hard to understand (and explain), the sentences should not be very
+long, use complex language with several examples embedded in the same
+sentence, and, also, seldom used words and weird euphemism or paraphrases
+can make the sentence hard to follow and to read it with only one
+time, and making everything even harder to understand all this without
+any punctuation marks makes the instructor cry and finally after
+trying to correct the language, you will get boomerang, and everyone's
+time has just been wasted.
+
+Please use proofreaders before sending even your unfinished version to
+the instructor and/or supervisor. You will get better comments when
+they do not need first proofread your text. Moreover, they can
+consentrate to the content better if the language and spelling
+mistakes are not distracting the reading. Several editors have their
+own proofreading tools, e.g. ispell in emacs. You can also use
+Microsoft Word to proofread your thesis: it can correct also some
+grammatical errors and not just misspelled words.
+
+Note also that if you have a section or a subsection, you have to have
+at least two of them, or otherwise the section or subsection title is
+unnecessary. Same with the paragraphs an: you should not have sections
+with only one paragraphe, and single sentence paragraph. Furthermore,
+always write some text after the title before the next level title.
+
+\section{Finding and referring to sources}
+
+Never ever copy anything into your theses from somebody else's text
+(nor your own previously published text). Never. Not even for starting
+point to be rewritten later. The risk is that you forgot the copied
+text to your thesis and end up to be accused of plagiarism. Plagiarism
+is a serious crime in studies and science and can ruin your career
+even its beginning. To repeate: never cut and paste text into your
+thesis!
+
+\subsection{Finding sources}
+
+All work is based on someone else's work. You should find the relevant
+sources of your field and choose the best of them. Also, you should
+refer to the original source where a fact has been mentioned first
+time. Remember source evaluation (criticism) with all sources you
+find.
+
+Good starting points for finding references in computer science are:
+\begin{itemize}
+% You can use this command to set the items in the list closer to each other
+% (ITEM SEParation, the vertical space between the list items)
+\setlength{\itemsep}{0pt}
+\item Nelli Portal (Aalto Library): \url{http://www.nelliportaali.fi}
+\item ACM Digital library: \url{http://portal.acm.org/}
+\item IEEExplore: \url{http://ieeexplore.ieee.org}
+\item ScienceDirect: \url{http://www.sciencedirect.com/}
+\item \ldots although Google Scholar (\url{http://scholar.google.com/}) will
+find links to most of the articles from the abovementioned sources, if you
+search from within the university network
+\end{itemize}
+
+Some of the publishers do not offer all the text of the articles
+freely, but the library has agreed on the rights to use the whole
+text. Thus, you should sometimes use computers in the domain of the
+university in order to get the full text. Sometimes the Nelli Portal
+can also help getting the whole article instead of just the abstract.
+The library has also brief instrucions how to find
+information~\cite{howfindinfo}.
+
+Instead of normal Google, use Google Scholar
+(\url{http://scholar.google.fi/}). It finds academic publications whereas
+normal Google find too much commercial advertisements or otherwise
+biased information. Wikipedia articles should be referred to in the master
+thesis only very, very seldomly. You can use Wikipedia for understanding
+some basics and finding more sources, but often you cannot be sure if
+the article is correct and unbiased.
+
+One important part of the sources that you have found is the reference
+list. This way you can find the original sources that all the other
+research of the field refer. Often you can also find more information
+with the name of the researchers that are often referred in the
+articles.
+
+\subsection{Referring to sources}
+
+The main point in referring to sources is to separate your own
+thinking and text from that of others. Facts of the research area can
+be given without reference, but otherwise you should refer to
+sources. This means two things: marking the source in the text where
+it has been used, and listing the sources usually in the end of the
+thesis in a way that help the reader to find the original source.
+
+There are several bibliography styles, meaning how to form the
+bibliography in the end of the thesis. Aalto's library has good
+instructions for many styles~\cite{bibinstructions}. You should ask
+from your supervisor or instructors which style you should use. This
+thesis template uses the number style that is often used in software
+engineering. The other style also used in the CS field,
+e.g. usability, is the Harvard style where instead of numbers, the
+reference is marked into the text with author's name and publishing
+year. Other areas use also many other styles for making the lists and
+marking the references.
+
+In addition to the list in the end of the thesis, you have to mark the
+source in the text where the source is used. There are three places
+for the reference: in a sentence before the period, in the end of a
+sentence after the period, or in the end of a paragraph. All of them
+have different meaning. The main point is that first you paraphrase
+the source using your own words and then mark the source. Next, we
+give short examples that are marked with \emph{emphasised text}.
+
+\emph{Haapasalo~\cite{HaapasaloThesis} researched database algorithms
+  that allows use of previous versions of the content stored in the
+  database.} This kind of marking means that this paragraph (or until
+the next reference is given) is based on the source mentioned in the
+beginning.  Giving the source you should use only the family name of
+the first author of the article, and not give any hints about what is
+the type of the article that is referred.
+
+\emph{B+-trees offers one way to index data that is stored in to a
+  database. Multiversion B+-trees (MVBT) offer also a way to restore
+  the data from previous versions of the database. Concurrent MVBT
+  allows many simultaneous updates to the database that is was not
+  possible with MVBT.~\cite{HaapasaloThesis}} When the marking is
+after the period, the reference is retrospective: all the paragraph
+(or after previous reference marking) is based on the source given in
+its end. If the content is very broad, you can start with saying
+\emph{According to Haapasalo}, then continue referring the source with
+several separate sentences, and in the end put the marking of your
+source \emph{ that shows that CMVBT are the
+  best. ~\cite{HaapasaloThesis}}.
+
+If your paragraph has several sources, the above mentioned styles are
+not proper. The reader of your thesis cannot know which of your
+sources give which of the statements. In this case, it is better to
+use more finegraded refering where the reference markings that are
+embedded in the sentences. For example, \emph{the multiversion B+-tree
+  (MVBT) index of Becker et al.~\cite{becker:1996:mvbt} allows database
+  users to query old versions of the database, but the index is not
+  transactional.
+  It's successor, the transactional MBVT (TMVBT), allows a single transaction
+  running in its own thread or process to update the database concurrently
+  with other transactions that only read the
+  database~\cite{haapasalo:2009:tmvbt}.
+  Further development, titled the concurrent MBVT (CMVBT),
+  allows several transactions to perform updates to the database at the same
+  time~\cite{HaapasaloThesis}}.
+  Here, the references are marked before
+  the period in the sentences where they are used.
+
+Finally, direct quotes are allowed. However, often you should avoid
+them since they do not usually fit in to your text very well. Using
+direct quotes has two tricks: quotation marks and the source.  \emph{
+  ``Even though deletions in a multiversion index must not physically
+  delete the history of the data items, queries and range scans can
+  become more efficient, if the leaf pages of the index structure are
+  merged to retain optimality.''~\cite{HaapasaloThesis}} Quotes are
+hard to make neatly since you should use only as much as needed
+without changing the text. Moreover, you often do not really
+understand what the author has mentioned with his wordings if you
+cannot write the same with your own words. Remember also that never
+cut and paste anything without marking the quotation marks right away,
+and in general, never cut and paste anything at all!
+
+Sometimes getting the original source can be almost impossible. In an
+extremely desperate situation, you can refer with structure \emph{mr
+  X~[\ldots] according to ms Y~[\ldots] defined that}, if you find a
+source that refers to the original source. Note also that the
+reference marking is never used as sentence element (example of how
+\textbf{not} to do it: \emph{\cite{HaapasaloThesis} describes
+an optimal algorithm for indexing multiversiond databases.}).
 
 
-\section{Sales function}
-
-Kuvailen myynnin nykytilaa, miten se on organisoitunut. Mitkä ovat sen tämän hetkiset haasteet
-Maybe joku organisaatio kaavio. 
-
-
-\section{Sales process 'as is'}
-
-Mikä on myyntiprosessin nykytila?
-
-\section{Presales}
-
-Presales was introduced to Sievo's organization in September 2012. Since the it has searched its ways of working and process to find the optimal processes. Currently presales acts as an interface between the sales team, prospects and the rest of the company. The main role is to support the sales team with the more technical issues and do software demonstrations and exceute proof of concepts. Presales is also responsible for carrying out the RFP processes according to the defined process. 
-
-Mikä on presales tämän hetkinen rooli. Miten se toimii suhteessa muuhun firmaan
-
-\section{Internal expectation for the study}
-
-Define the role of presales in relation to the rest of the organisation. 
 
 % \input{3environment.tex}
 
-\chapter{Literature review}
-\label{chapter:Theory}
+\chapter{Environment}
+\label{chapter:environment}
+
+A problem instance is rarely totally independent of its environment.
+Most often you need to describe the environment you work in, what
+limits there are and so on. This is a good place to do that. First we
+tell you about the LaTeX working environments and then is an example
+from an thesis written some years ago.
 
 
-In this theory part of my thesis I will start by going through the theory behind the development of sales processes. I wil start by introducing the general theories introduced in the 80's and narrow in down to the procesees of high technology selling today. 
-In the second part of the theory I will examine the same process from the buyer's side. 
-Finally I will explain the concept of service development on which I will base my recommendation of the organisation of the presales. 
-
-
-\section{Sales process}
+\section{LaTeX working environments}
 \label{sec:environments}
-A process is a set of set of actions done in a sequence that aim for a certain outcome. A sales process is a set of actions that target to reach a sale. In this section I go throught the trends that have influeced the evolution of the sales process. I will lead this subject towards the specific theme of high technology sales proces.  
 
+To create \LaTeX\ documents you need two things: a \LaTeX\ environment for
+compiling your documents and a text editor for writing them.
 
-\subsection{Seven steps of personal selling}
+\subsection{Environment}
 
-The seven steps of personal selling is one of the most oldest and most referred to processes in the field of sales. It used to be referred to as the most expensive and exclusive from of marketing. 
+Fortunately \LaTeX\ can nowadays be found for any (modern) computer
+environment, be it Linux, Windows, or Macintosh.
+For Linuxes (and other Unix clones) and Macs, I'd recommend \emph{TeX
+Live}~\cite{TeXLive}, which is the current default \LaTeX\ distribution for
+many Linux flavors such as Fedora, Debian, Ubuntu, and Gentoo.
+TeX Live is the replacement for the older \emph{teTeX}, which is
+no longer developed.
 
-The seven steps were identified already earlier but Dubinsky's research in 1980, the steps reached their most referred form. Before there were multiple version used. 
+TeX Live works also for Windows machines (at least according to their web
+site); however, I have used \emph{MiKTeX}~\cite{MiKTeX} and can recommend it
+for Windows.
+MiKTeX has a nice package manager and automatically fetches missing packages
+for you.
 
-Dubinsky studied the underlying dimensions that characterize the techniques salespeople use during the execution of those steps. The main emphasis was on how the salespeople themselves see the importance of the various techniques. Dubinsky distinguished the most important steps and describe the sales process based on those. 
+\subsection{Editor}
 
+You can write \LaTeX\ documents with any text editor you like, but having
+syntax coloring options and such really helps a lot.
+My personal favourite for editing \LaTeX\ is the
+\emph{TeXlipse}~\cite{TeXlipse} plugin for the Eclipse IDE~\cite{Eclipse}.
+Eclipse is an open-source integrated development environment (IDE) initially
+created for writing Java code, but it currently has support for editing
+languages such as C, C++, JavaScript, XML, HTML, and many more.
+The TeXlipse plugin allows you to edit and compile \LaTeX\ documents directly
+in Eclipse, and compilation errors and warnings are shown in the Eclipse
+\emph{Problems} dialog so that you can locate and fix the issues easily.
+The plugin also supports reference traversal so that you can locate the source
+line where a label or a citation is defined.
 
-\newline \newline \emph{Prospecting}\newline 
-Prospecting is the first phase of the process where a salesperson is searching for new potential customers. The purpose is to find customers who have not yet purchased from the company. This phase also usually includes qualifying the prospect as a potential one. \citep{Jobber}\newline \newline
-\emph{Preapproach}\newline 
-Preapproaching phase is the investigation phase before the actual visit. It includes the salesperson getting to know the customers need, industry, seeing for potential past correspondance and preparing material for the actual meeting. \citep{Moncrief}\newline \newline
-\emph{Approach}\newline
-The approach could also be referred as the first impression. It is the first moments with the customer when the trust and impression are made. Dubinsky mentions that at this stage several different types of approaches might be taken for example the product approach, consumer approach, the consultative approach. \citep{Dubinsky} \newline \newline
-\emph{Presentation}\newline
-The presentation is the main part of the meeting and require an adequate amount of preparations. This includes sharing the information regarding the product and demonstrations. It could be one meeting or occur in several instances. \citep{Moncrief}\newline \newline
-\emph{Overcoming objections}\newline
-The customer might have doubts and hesitations regarding the purchase. At this stage the salesperson tries to get to the bottom of the concerns and overcome them. \citep{Moncrief}\newline \newline
-\emph{Close}\newline
-Close is the buy or order of the product. The objections have been overcome at this stage and the commitment to buy has been achieved \citep{Moncrief} \newline \newline
-\emph{Follow-up}\newline
-The follow-up step, also referred as post-sale includes the assumption that the sales is not over with the order. After the order the salesperson makes sure that everything is operating smoothly and the customer is happy. \citep{Dubinsky}
-\newline 
-\begin{figure}[ht]
-  \begin{center}
-    \includegraphics[width=\textwidth]{sevensteps.pdf}
-    \caption{The seven steps of personal selling}
-    \label{fig:seven}
-  \end{center}
-\end{figure}
-\subsection{Customer Centric approach}
+Eclipse is an entire development environment, so it may feel a bit heavy-weight
+for editing a document.
+If you are looking for a more light-weight option, check out TeXworks.
+TeXworks is a \LaTeX\ editor that is packaged with the newer MiKTeX
+distributions, and it can be acquired from \url{http://www.tug.org/texworks/}.
 
-The concept of putting the customer first is not new but it has definitely risen its importance during the past decade. \citp{Bolton} ~\citep{Shah}. Companies have made the shift from production oriented towards customer oriented. The focus used to be on optimizing the internal processes and reaching the economies of scale, but now the importance of the customer is aknowledged. 
+And if you are attached to your \emph{emacs} or \emph{vim} editor, you
+can of course edit your \LaTeX\ documents with them.
+Emacs at least has syntax coloring and you can compile your document with a key
+binding, so this may be a good option if you prefer working with the standard
+Linux text editors.
 
-The heart of costumer centricity lies if creating a win win situation; selling products and delivering value to the customer. \citep{Shah} Keeping the customer at the core of all the processes also affects the companies financial performance. Studies have shown that companies measuring customer satidfaction, loyalty and quality preceived also do better financially. The emphasis is on valuing the relationship with the customer. 
+\section{Graphics}
 
-The idea in customer centricity is not only set the sales to better serve the customer but the direct the whole organisztion to serve the customer better. This also means alingning the product development, implementation, hr and other functions towards the customer's need and interests. The whole organisation should be on the mission of serving the customer better. It is not enough anymore that the sales act as an interface towards the customer. 
-\newline
-
-The customer centricity has modified the seven steps of personal selling according to Moncrief et al. as the following. These modification also take in account the other impacting trends such as improved technology and increased knowledge on the buyer's side. \newline \newline \emph{Prospecting - Customer retention and deletion}\newline 
-The prospecting itself might even be outsourced since the main emphasis is put on the most important customer and retaining the relationship with them \citep{Moncrief}\newline \newline
-\emph{Preapproach - Database and knowledge management}\newline 
-Big share of the marketing and selling activities revolve around the maintenance of the knowledge base. Salespeople keep the customer database updated which serves as a comprehensive source of knowledge. \citep{Moncrief}\newline \newline
-\emph{Approach - Nurturing the relationship}\newline
-Since nowadays much effort is put on building the relationship with the customer the selling activites have also been directed towards that. Relationship maintenance is a long term process. In the traditional approach this step was about making the first impression and in an updated version it serves more for the activities to build the foundation for the relationship. \citep{Moncrief} \newline \newline
-\emph{Presentation - Marketing the product}\newline
-Instead of presenting the products the shift has been towards gathering more information from the customer and listening to the needs and problems on their side. Those requirements are then mirrored against the product offerings. The role of the salesperson is to conduct information between the buyer and seller organization.   \citep{Moncrief}\newline \newline
-\emph{Overcoming objections - Problem solving}\newline
-The focus has shifted from overcoming objections to acting as a consultant finding effective solutions to the identified problems. The salesperson should be seen as a valued partner that bring value to the customer's end. \citep{Moncrief}\newline \newline
-\emph{Close - Adding value / satisfying needs}\newline
-The customer and the seller are seen are working together towards a common goal. The ultimate goal for the salesperson is to achieve a strong relationship and a partnership towards instead of just closing a deal. This means continuous business with the client. \citep{Moncrief} \newline \newline
-\emph{Follow-up - Customer relationship maintenance}\newline
-The maintenance means that the selling organization has assigned a person or a team to keep the relationship alive. The reward systems of the salespeople have also been altered towards long term relationship building.  \citep{Moncrief}
-\begin{figure}[ht]
-  \begin{center}
-    \includegraphics[width=\textwidth]{cosseven.pdf}
-    \caption{The process evolving with the customer centric approach}
-    \label{fig:cosseven}
-  \end{center}
-\end{figure}
-
-\subsection{High Tech selling: solution selling}
-
-
-Compared to the costumer centric selling introduced in the earlier chapter, in solution selling  the focus is on the fifth and sixth step of the process; the problem solving and adding value. The whole approach is built around those steps. One could think that the costumer centric approach is a bigger theme that has been further narrowed down to solution selling fopcusing on the problem
-
-According to Eades (2006) being solution centric means to define the organization by the problems it solves for the customer. All the functions within the organization are aligned to tackle the customer's problem. Its value is measured not only on the financial performance but also on the outcomes that their customer receives. 
-
-High technology products are typically implemented to solve a certain customer problem. According to Sharma et al. (2008) these are however typically sold more with product orientation than  customer orientation. In the field of technology there are several indications that selling technology should acquire a more solution centric approach.
-
-The high complexity of the technology services and products make their purchasing also complex. Usually the procurement acquires thorough capital and technical considerations. This also sets higher expectations to the sales side. The salesperson is seen more as a consultant solving the problem which sets high standards for the sales people. \citep{Sharma}
-
-To match the expectations the sales should be seen as teams. Sales should be organized around tackling the customer's problem and usually a single salesperson is not enough. The selling in typically done in teams with multidiscliplinary functions to answer the customer concern thoroughly. The sales needs to have the knowledge regarding the technical specifications and the fulfillment. They should be able to maintain technical dialog and offer technical support when needed.  \citep{Sharma}
-
-The people skills required from the sales side also have a new meaning. Manage and influence the internal stakeholders and align those to solve the customer problem. The sales should be able to orchestrate the internal resources to satisfy the clients needs. The sales acts are the main gate of information between the customer and the rest of the organization. Sales is also the main source of information towards the products development.  \citep{Sharma}
-
-The implication of the solution selling to the sales process is the emphasis on the problem identification, presentation of the solution and continued costumer support. The process according to \citep{Eades}. The opportunity planning is no longer seen as part of the sales process, instead as a separate entity that come before the sales execution. The process now begins from creating the opportunity inside the customer's organization. \newline \newline\emph{Create}\newline 
-The purpose of the first step is to create interest inside the customer organization and identify a potential sponsor for the purchase. During this phase also an opportunity and competitive strategy should be assessed. \citep{Eades}\newline \newline
-\emph{Qualify}\newline 
-In the qualify phase the main pain is identified and a vision is created and communicated to solve the problem. Simultaneously one should also negotiate the access to power - to a person who can make the actual decisions. 
- \citep{Eades}\newline \newline
-\emph{Develop}\newline
-When the person with the power has been achieve, also his pain should be identified. Then an agreement should be made to explore further. During this phase also evaluation criteria should be identified. 
-\citep{Eades} \newline \newline
-\emph{Prove}\newline
-Here the preliminary solutions should be presented and proposal for the implementation. During this phase a verbal agreement should be achieved before moving on to the next step.  \citep{Eades}\newline \newline
-\emph{Negotiate}\newline
-This step serves to prepare for the signing of the contracts. Final agreements should be reached. \citep{Eades}\newline \newline
-\emph{Close}\newline
-The purpose of the close phase is to get the documents signed and the official approval of the project. \citep{Eades} \newline \newline
-\emph{Implement}\newline
-In the final phase the solution is implemented to the customer and satisfaction is measured. The identification of new potential opportunities also begins and achiving the reference story \citep{Eades}
-\newline
-
+When you use \texttt{pdflatex} to render your thesis, you can include PDF images
+directly, as shown by Figure~\ref{fig:indica_model} below.
 
 \begin{figure}[ht]
   \begin{center}
-    \includegraphics[width=\textwidth]{kolmas.pdf}
-    \caption{Evolution of the steps towards high tech sales}
-    \label{fig:kolmas}
+    \includegraphics[width=\textwidth]{example_indica_model.pdf}
+    \caption{The INDICA two-layered value chain model.}
+    \label{fig:indica_model}
   \end{center}
 \end{figure}
 
-\subsection{From solution selling to insight selling}
-The future trends in sales processes are yet to be defined. In 2012 Adamson et al. wrote and interesting article on the Harvard Business review on new themes of selling. They were stating that solution selling is coming to its end. 
+You can also include JPEG or PNG files, as shown by Figure~\ref{fig:eeyore}.
 
-The situation is shifting towards purchasers being ahead of the salespeople. They do not need the sales people anymore to consult them on what they need. Instead the clients have a deep understanding of their problems and a well defined RFP document to find the best supplier to fill their needs. The problems are already diagnosed and the procurement organization has taken over the search for the best supplier. The sales conversations are turning into fulfillment conversations. 
-The key in insight selling is to identify the potential customers that are agile enough and ready for the change. What is now needed from the sales people is the ability to challenge the buyer organization radically. Give them new insight and reveal them problems they do not know they have. 
-This also includes coaching the buyer to get the deal done. The salesperson usually has more experience on how to influence people inside the organizations. 
+\begin{figure}[ht]
+  \begin{center}
+    \includegraphics[width=9cm]{example_ihaa.jpg}
+    \caption{Eeyore, or Ihaa, a very sad donkey.}
+    \label{fig:eeyore}
+  \end{center}
+\end{figure}
 
-According to Adamson et al. organizations need to fundamentally rethink the training and support provided to their sales. 
-
-\section{Organization buying behaviour theory}
-
-
-Fundamentally defining the sales begins with understanding the buying process. In this chapter I will introduce the theories behind the buying. The buying situations are all very different from one another since they deeply depend on the particular purchase at hand.
- There are several elements in the particular purchase that define the buying behavior. Lewin and Donthu have consolidated these dimensions in their study. 
-
-Based on the consolidation research done by Lewin and Donthu (2005) I will define the scope of the organisational buying behavior teory I will focus. 
-ostotilanteita on paljon erilaisia ja erityyppisiä. 
-Nää tyypit on hahmottaneet ne päädimensiot miten määritelä ostotilanteet. 
-Based on this research we identify the factor determining our type of purchases. 
-Näitä softa ostoja määrittävät tekijät. 
-
-Purchase situation
-- buyclass
-- Product type
-- Purchase importance
-- Purchase uncertainty
-Buying center structure
-- size
-- formalization
-- centralization
-Buying center involvement
-- lateral involvement
-- vertical involvement
-- relative influence. 
-
-New- task buying passes through several stages: awareness, interest, evaluation, trial and adoption.
-Business buyers makes the fewest decisions in the straight-rebuy situation and the most in the new task situation. Different decision participants influence each decision \citep{Kotler}
-
-
-
-\citep{Lewin}
-several 
-
-\subsection{Buygrid framework}
-
-developed by Robinson, Faris, Wind 1967
-
-\subsection{MERPAP framework}
-Research around software and IT buying is scarce.  The study made by Jacques Verville and Allannah Halingten is one of the few. They developed a model to describe the buying process of an ERP software. Although the Sievo software is not an ERP system similar elements can be found in the dimensions that are defined during the purchasing phase such as the benefits, riks, challenges, costs etc. 
-
-According to Verville and Halingten some parts of the existing models of the organisation buying behaviour can be adapted in buying IT while others may not. Some assumption that do not match with the IT procurement is that
-- they overly emphasize the influences of the buying unit while neglecting the dynamics of the process involved. 
-
-Based on the multiple case studies of the process of acquiring an ERP software Verville and Halingten identified six distinct common phases. These steps are not linear and can be conducted concurrently and iteratively. 
-
-The planning phase comprises of the team formation with defining the roles, needed knowledge and skills leaders and whether for example external consultants are needed. The acquisition strategy is also defined. What are the technical requirements based on the existing solutions, functional requirements, the different users and existing processes. The evaluation criteria for the vendors is also defined and a market analysis is made. The different deliverables for the different phases are also specified. 
-
-The planning phase requires the majority of the time spend during the process. The planning ends with a RFP document sent to the long list of vendor acquired on the market analysis. 
-
-After the delivering of the RFP documents the short list is made of the vendor that most likely meet the needs of the organization. Information is gathered throughout the process. It starts with the higher level of information and as the process goes further the evaluation criteria is based on a more detailed information.
-
-A recommendation of the preferred supplier is usually presented to a outside group; board of directors or steering committee for instance. The official choice is usually done by the steering group.
-
-The negotiations comprise of two parts the legal and the business negotiations.  The business negotiations happen concurrently with the other phases; during the planning, information search, selection and evaluation activities. the legal negoations only begin with the selected supplier. \citep{Verville}
-
-
-\subsection{roles of buying}
-
-Buying psykology - human side of selling
-Companies do not buy - people do
-Each party in the buying process has subtle roles and need that the sales has to address.
-The involvement of many people in the purchase decision creates a group dynamic that the selling company must factor into its sales planning. Who makes up the buying group? How will the parties interact? Who will dominate? What priorities do the individuals have.
-Effective selling requires usefully combining the individual and group dynamics to predict what the buying "decision making unit" will do \citep{Bonoma}
-
-Other department personnel are more influental in a new buy situations. 
-More lateral involvement
-
-the buying center includes all members that play any of the seven roles. 
-
-\newline \newline \emph{Initiators}\newline 
-Those who beging the purchase process \citep{}\newline \newline
-\emph{Users}\newline 
-Those who actually use the product\citep{}\newline \newline
-\emph{Influencers}\newline
-Those who provide information and add decision criteria throughtout the process \citep{} \newline \newline
-\emph{Deciders}\newline
-Those who have authority to select the supplier   \citep{}\newline \newline
-\emph{Approvers}\newline
-Those who authorize the proposed actions of deciders or buyers \citep{}\newline \newline
-\emph{Buyers}\newline
-Those who have authority to execute the contractual arrangements \citep{} \newline \newline
-\emph{Gatekeepers}\newline
-Those who control the flow of information. Could be secretaries, receptionist or anyone who can prevent access to a DMU member, or a buyer whose agreements must be sought before a supplier can contact other member of the DMU  \citep{Moncrief}
-
-
-\subsection{roles in system buying}
-
-enemmän rooleja mukana ostamisessa kuin tavallisessa. lattral extent on suurempi samoin vertical extent. 
-
-The legal negoatiation occur after the choice of the vendor. The business part of the negotiations is doe during the process. Once achieved the consensus the implementation of the software may begin. 
+You can create PDF files out of practically anything.
+In Windows, you can download PrimoPDF or CutePDF (or some such) and install a
+printing driver so that you can print directly to PDF files from any
+application. There are also tools that allow you to upload documents in common
+file formats and convert them to the PDF format.
+If you have PS or EPS files, you can use the tools \texttt{ps2pdf} or
+\texttt{epspdf} to convert your PS and EPS files to PDF\@.
 
 % Comment: If your sentence ends in a capital letter, like here, you should
 % write \@ before the period; otherwise LaTeX will assume that this is not
@@ -813,23 +941,70 @@ The legal negoatiation occur after the choice of the vendor. The business part o
 % the longer sentence separator), use \  (backslash and space) after the
 % period. Like so: a.\ first item, b.\ second item.
 
+Furthermore, most newer editor programs allow you to save directly to the PDF
+format. For vector editing, you could try Inkscape, which is a new open source
+WYSIWYG vector editor that allows you to save directly to PDF\@.
+For graphs, either export/print your graphs from OpenOffice Calc/Microsoft
+Excel to PDF format, and then add them; or use \texttt{gnuplot}, which can
+create PDF files directly (at least the new versions can).
+The terminal type is \emph{pdf}, so the first line of your plot file should be
+something like \texttt{set term pdf \ldots}.
 
+To get the most professional-looking graphics, you can encode them using the
+TikZ package (TikZ is a frontend for the PGF graphics formatting system).
+You can create practically any kind of technical images with TikZ, but it has a
+rather steep learning curve. Locate the manual (\texttt{pgfmanual.pdf}) from
+your \LaTeX\ distribution and check it out. An example of TikZ-generated
+graphics is shown in Figure~\ref{fig:page-merge}.
+
+\begin{figure}[ht]
+  \begin{center}
+    \input{example_page-merge.tex}
+    \caption{Example of a multiversion database page merge. This figure has
+    been taken from the PhD thesis of Haapasalo~\cite{HaapasaloThesis}.}
+    \label{fig:page-merge}
+  \end{center}
+\end{figure}
+
+Another example of graphics created with TikZ is shown in
+Figure~\ref{fig:tikz-examples}.
+These show how graphs can be drawn and labeled.
+You can consult the example images and the PGF manual for more examples of what
+kinds figures you can draw with TikZ.
 
 % These definitions are only used in the example images; you will not
 % need them for your thesis...
+\newlength{\graphdotsize}
+\setlength{\graphdotsize}{1.7pt}
+\newlength{\graphgridsize}
+\setlength{\graphgridsize}{1.2em}
+\begin{figure}[ht]
+\begin{center}
+\subfigure[Examples of obstruction graphs for the Ferry Problem]{
+  \input{example_obstruction-grouped.tex}
+}
+\subfigure[Examples of star graphs]{
+  \input{example_general-star-graphs.tex}
+}
+\caption{Examples of graphs draw with TikZ. These figures have been taken from a
+course report for the graph theory course~\cite{FerryProblem}.}
+\label{fig:tikz-examples}
+\end{center}
+\end{figure}
 
-\section{Service concept}
+
 
 % \input{4methods.tex}
 
-\chapter{Empirical part}
+\chapter{Methods}
 \label{chapter:methods}
-\section{Methods}
 
-internal interviews
-external interviews
+You have now stated your problem, and you are ready to do something
+about it!  \emph{How} are you going to do that? What methods do you
+use?  You also need to review existing literature to justify your
+choices, meaning that why you have chosen the method to be applied in
+your work.
 
-\section{Results}
 % An example of a traditional LaTeX table
 % ------------------------------------------------------------------
 % A note on underfull/overfull table cells and tables:
@@ -867,57 +1042,119 @@ external interviews
 % paragraph-formatting environment inside the cell. Most common ones are
 % the minipage-environment and the \parbox command (see LaTeX documentation
 % for details; or just google for ``LaTeX minipage'' and ``LaTeX parbox'').
-%\begin{table}
-%\begin{tabular}{|p{2cm}|p{3.8cm}|p{4.5cm}|p{1.1cm}|}
+\begin{table}
+\begin{tabular}{|p{2cm}|p{3.8cm}|p{4.5cm}|p{1.1cm}|}
 % Alignment of sells: l=left, c=center, r=right.
 % If you want wrapping lines, use p{width} exact cell widths.
 % If you want vertical lines between columns, write | above between the letters
 % Horizontal lines are generated with the \hline command:
-%\hline % The line on top of the table
-%\textbf{Code} & \textbf{Name} & \textbf{Methods} & \textbf{Area} \\
-%\hline
+\hline % The line on top of the table
+\textbf{Code} & \textbf{Name} & \textbf{Methods} & \textbf{Area} \\
+\hline
 % Place a & between the columns
 % In the end of the line, use two backslashes \\ to break the line,
 % then place a \hline to make a horizontal line below the row
-%T-110.6130 & Systems Engineering for Data Communications
-   % Software & \raggedright Computer simulations, mathematical modeling,
-  %experimental research, data analysis, and network service business
- % research methods, (agile method) & T-110 \\
-%\hline
-%\multicolumn{2}{|p{6.25cm}|}{Mat-2.3170 Simulation (here is an example of
- %multicolumn for tables)}& Details of how to build simulations & T-110 \\
+T-110.6130 & Systems Engineering for Data Communications
+    Software & \raggedright Computer simulations, mathematical modeling,
+  experimental research, data analysis, and network service business
+  research methods, (agile method) & T-110 \\
+\hline
+\multicolumn{2}{|p{6.25cm}|}{Mat-2.3170 Simulation (here is an example of
+ multicolumn for tables)}& Details of how to build simulations & T-110 \\
 % The multicolumn command takes the following 3 arguments:
 % the number of cells to merge, the cell formatting for the new cell, and the
 % contents of the cell
-%\hline
-%S-38.3184 & Network Traffic Measurements and Analysis
-%& \raggedright How to measure and analyse network
- % traffic & T-110 \\ \hline
-%\end{tabular} % for really simple tables, you can just use tabular
+\hline
+S-38.3184 & Network Traffic Measurements and Analysis
+& \raggedright How to measure and analyse network
+  traffic & T-110 \\ \hline
+\end{tabular} % for really simple tables, you can just use tabular
 % You can place the caption either below (like here) or above the table
-%\caption{Research methodology courses}
+\caption{Research methodology courses}
 % Place the label just after the caption to make the link work
-%\label{table:courses}
-%\end{table} % table makes a floating object with a title
+\label{table:courses}
+\end{table} % table makes a floating object with a title
+
+If you have not yet done any (real) metholodogical courses (but chosen
+introduction courses of different areas that are listed in the
+methodological courses list), now is the time to do so or at least
+check through material of suitable methodological courses. Good
+methodologial courses that consentrates especially to methods are
+presented in Table~\ref{table:courses}. Remember to explain the
+content of the tables (as with figures). In the table, the last column
+gives the research area where the methods are often used. Here we used
+table to give an example of tables. Abbreviations and Acronyms is also
+a long table. The difference is that longtables can continue to next
+page.
 
 
 
 % \input{5implementation.tex}
 
-\chapter{Recommendations}
-\label{chapter:Recommendations}
+\chapter{Implementation}
+\label{chapter:implementation}
+
+You have now explained how you are going to tackle your problem.
+Go do that now! Come back when the problem is solved!
+
+Now, how did you solve the problem?
+Explain how you implemented your solution, be it a software component, a
+custom-made FPGA, a fried jelly bean, or whatever.
+Describe the problems you encountered with your implementation work.
 
 
 
 % \input{6evaluation.tex}
 
-\chapter{Evaluation/Discussion/Conclusion}
+\chapter{Evaluation}
 \label{chapter:evaluation}
+
+You have done your work, but that's\footnote{By the way, do \emph{not} use
+shorthands like this in your text! It is not professional! Always write out all
+the words: ``that is''.} not enough.
+
+You also need to evaluate how well your implementation works.  The
+nature of the evaluation depends on your problem, your method, and
+your implementation that are all described in the thesis before this
+chapter.  If you have created a program for exact-text matching, then
+you measure how long it takes for your implementation to search for
+different patterns, and compare it against the implementation that was
+used before.  If you have designed a process for managing software
+projects, you perhaps interview people working with a waterfall-style
+management process, have them adapt your management process, and
+interview them again after they have worked with your process for some
+time. See what's changed.
+
+The important thing is that you can evaluate your success somehow.
+Remember that you do not have to succeed in making something spectacular; a
+total implementation failure may still give grounds for a very good master's
+thesis---if you can analyze what went wrong and what should have been done.
+
+
+
+
+% \input{7discussion.tex}
+
+\chapter{Discussion}
+\label{chapter:discussion}
+
+At this point, you will have some insightful thoughts on your implementation
+and you may have ideas on what could be done in the future.
+This chapter is a good place to discuss your thesis as a whole and to show your
+professor that you have really understood some non-trivial aspects of the
+methods you used\ldots
 
 
 
 % \input{8conclusions.tex}
 
+\chapter{Conclusions}
+\label{chapter:conclusions}
+
+Time to wrap it up!
+Write down the most important findings from your work.
+Like the introduction, this chapter is not very long.
+Two to four pages might be a good limit.
 
 
 
